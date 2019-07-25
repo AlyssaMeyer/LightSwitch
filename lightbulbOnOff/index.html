@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lightbulb</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <img src="off.png" id="bulb" alt="off lightbulb">
+    <div id="buttons">
+      <button onclick=light(1)>ON</button>
+      <button onclick=light(0)>OFF</button>
+    </div>
+    <script>
+      function light(value) {
+        var pic;
+        var background;
+        if (value===1) {
+          pic="on.png";
+          background="white";
+        } else {
+          pic="off.png";
+          background="black";
+        }
+        document.getElementById("bulb").src=pic;
+        document.body.style.backgroundColor=background;
+      }
+    </script>
+  </body>
+</html>
